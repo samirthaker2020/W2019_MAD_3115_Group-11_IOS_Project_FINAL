@@ -14,6 +14,7 @@
 		EB5B25E7224715A100962B92 /* mainicon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB5B25E6224715A100962B92 /* mainicon.png */; };
 		EB5B25E9224718FA00962B92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25E8224718FA00962B92 /* LoginViewController.swift */; };
 		EB5B25EE22471E3700962B92 /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25ED22471E3700962B92 /* MenuCollectionViewController.swift */; };
+		EB5B25F2224723C300962B92 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25F1224723C300962B92 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EB5B25E6224715A100962B92 /* mainicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainicon.png; sourceTree = "<group>"; };
 		EB5B25E8224718FA00962B92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB5B25ED22471E3700962B92 /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewController.swift; sourceTree = "<group>"; };
+		EB5B25F1224723C300962B92 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		EB5B25E32247149900962B92 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB5B25F0224723A800962B92 /* Signup */,
 				EB5B25EA22471DD100962B92 /* menu */,
 				EB5B25E5224714B900962B92 /* login */,
 			);
@@ -108,6 +111,14 @@
 				EB5B25ED22471E3700962B92 /* MenuCollectionViewController.swift */,
 			);
 			path = menu;
+			sourceTree = "<group>";
+		};
+		EB5B25F0224723A800962B92 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				EB5B25F1224723C300962B92 /* SignupViewController.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 			files = (
 				EB5B25E9224718FA00962B92 /* LoginViewController.swift in Sources */,
 				EB5B25EE22471E3700962B92 /* MenuCollectionViewController.swift in Sources */,
+				EB5B25F2224723C300962B92 /* SignupViewController.swift in Sources */,
 				EB5B25D32247119C00962B92 /* ViewController.swift in Sources */,
 				EB5B25D12247119C00962B92 /* AppDelegate.swift in Sources */,
 			);

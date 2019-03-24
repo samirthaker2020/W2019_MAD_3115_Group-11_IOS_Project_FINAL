@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SignupViewController.swift
 //  W2019_MAD_3115_Group-11_IOS_Project_FINAL
 //
 //  Created by Owner on 2019-03-23.
@@ -8,29 +8,19 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignupViewController: UIViewController {
 
-    @IBOutlet weak var txtpass: UITextField!
-    
-    @IBOutlet weak var txtemail: UITextField!
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-          self.navigationController?.navigationBar.isHidden=true
+  self.navigationController?.navigationBar.isHidden=true
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btnlogin(_ sender: Any) {
-        
+    @IBAction func backtologin(_ sender: UIBarButtonItem) {
+        let u=self.navigationController?.viewControllers[0]
+        self.navigationController?.popToViewController(u!, animated: true)
     }
     
-    @IBAction func btnsignup(_ sender: Any) {
-        let sb=UIStoryboard(name: "Main", bundle: nil)
-        let lionvc=sb.instantiateViewController(withIdentifier: "signuppage") as!   SignupViewController
-        self.navigationController?.pushViewController(lionvc, animated: true)
-    }
     /*
     // MARK: - Navigation
 
