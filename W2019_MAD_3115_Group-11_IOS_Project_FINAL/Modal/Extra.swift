@@ -8,5 +8,5 @@
 
 import Foundation
 struct Extra {
-   // var cust=Customer()
+    var p=Product()
 }
