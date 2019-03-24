@@ -11,6 +11,7 @@
 		EB1487942247F6C600F892BD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1487932247F6C600F892BD /* HelpViewController.swift */; };
 		EB1487962247F6EE00F892BD /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1487952247F6EE00F892BD /* ProductViewController.swift */; };
 		EB1487992247F72800F892BD /* ViewCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1487982247F72800F892BD /* ViewCartViewController.swift */; };
+		EB14879B2247FCA500F892BD /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB14879A2247FCA500F892BD /* ProductTableViewCell.swift */; };
 		EB5B25D12247119C00962B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25D02247119C00962B92 /* AppDelegate.swift */; };
 		EB5B25D32247119C00962B92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25D22247119C00962B92 /* ViewController.swift */; };
 		EB5B25D62247119C00962B92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5B25D42247119C00962B92 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		EB1487932247F6C600F892BD /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		EB1487952247F6EE00F892BD /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		EB1487982247F72800F892BD /* ViewCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCartViewController.swift; sourceTree = "<group>"; };
+		EB14879A2247FCA500F892BD /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		EB5B25CD2247119C00962B92 /* W2019_MAD_3115_Group-11_IOS_Project_FINAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W2019_MAD_3115_Group-11_IOS_Project_FINAL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5B25D02247119C00962B92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB5B25D22247119C00962B92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				EB1487952247F6EE00F892BD /* ProductViewController.swift */,
+				EB14879A2247FCA500F892BD /* ProductTableViewCell.swift */,
 			);
 			path = product;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				EB1487962247F6EE00F892BD /* ProductViewController.swift in Sources */,
 				EB1487912247F66100F892BD /* conatctViewController.swift in Sources */,
 				EBBE67DF2247F0380010B123 /* MenuCollectionViewCell.swift in Sources */,
+				EB14879B2247FCA500F892BD /* ProductTableViewCell.swift in Sources */,
 				EB5B25F72247347E00962B92 /* IDisplay.swift in Sources */,
 				EB5B25F42247300100962B92 /* Customer.swift in Sources */,
 				EB5B25D32247119C00962B92 /* ViewController.swift in Sources */,
