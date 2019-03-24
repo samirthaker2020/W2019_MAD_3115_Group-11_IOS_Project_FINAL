@@ -37,7 +37,7 @@ class Customer:IDisplay {
     var ccinfo:String?
     var shipinfo:String?
     var custdetails=Dictionary<String,Customer>()
-    var ch:Bool?
+    var ch:Bool=false
   
     init() {
         self.fname=String()
@@ -78,7 +78,10 @@ class Customer:IDisplay {
         {
             ch=false
         }
-        return ch!
+       
+            return ch
+        
+        
     }
     
     

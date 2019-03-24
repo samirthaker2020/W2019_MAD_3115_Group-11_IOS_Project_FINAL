@@ -29,6 +29,7 @@ class ProductTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBOutlet weak var btnvd: UIButton!
     
     @IBAction func btndetails(_ sender: Any) {
         

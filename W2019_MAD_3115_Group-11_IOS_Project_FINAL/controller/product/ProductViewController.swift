@@ -11,6 +11,7 @@ import UIKit
 class ProductViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
    
     
+    @IBOutlet weak var tbl1: UITableView!
     
     let glblData = Product.sharedproduct
     var a=[Product]()
@@ -19,6 +20,8 @@ class ProductViewController: UIViewController,UITableViewDataSource,UITableViewD
 self.navigationController?.navigationBar.isHidden=false
         getproducts()
         glblData.displaydata()
+        self.tbl1.dataSource=self
+        self.tbl1.delegate=self
         // Do any additional setup after loading the view.
     }
     
@@ -51,9 +54,20 @@ self.navigationController?.navigationBar.isHidden=false
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pcell") as! ProductTableViewCell
+        
+        let m=a[indexPath.row]
+        
+        cell.price.text="Price($)::\(String(m.productprice))"
+        cell.pname.text="Name::\(m.productname)"
+        cell.pimage.image=UIImage(named: m.pimage)
+        
+       return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150.0
+    }
     /*
     // MARK: - Navigation
 

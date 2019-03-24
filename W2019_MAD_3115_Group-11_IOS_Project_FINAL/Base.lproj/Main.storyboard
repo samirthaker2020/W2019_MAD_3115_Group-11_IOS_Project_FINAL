@@ -228,26 +228,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="142" id="cAQ-ue-4oh" customClass="ProductTableViewCell" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="142"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pcell" rowHeight="169" id="cAQ-ue-4oh" customClass="ProductTableViewCell" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="169"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cAQ-ue-4oh" id="F2c-vC-Ycw" customClass="ProductTableViewCell" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="168.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la7-0W-rlr">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la7-0W-rlr">
                                                     <rect key="frame" x="15" y="11" width="120" height="119"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSO-Yw-XOk">
-                                                    <rect key="frame" x="166" y="22" width="42" height="21"/>
+                                                    <rect key="frame" x="166" y="22" width="171" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRF-zV-VBb">
-                                                    <rect key="frame" x="166" y="51" width="42" height="21"/>
+                                                    <rect key="frame" x="166" y="51" width="162" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -266,6 +266,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnvd" destination="5Wk-We-JXy" id="4j9-Ez-sdc"/>
                                             <outlet property="pimage" destination="la7-0W-rlr" id="K05-9x-7Sc"/>
                                             <outlet property="pname" destination="pSO-Yw-XOk" id="Lob-Wz-Bpo"/>
                                             <outlet property="price" destination="FRF-zV-VBb" id="IJI-et-w8G"/>
@@ -285,6 +286,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="H4h-5C-pdi"/>
                     </view>
+                    <connections>
+                        <outlet property="tbl1" destination="RIB-nd-rpg" id="DLK-oV-HVI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cw-5W-xvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
