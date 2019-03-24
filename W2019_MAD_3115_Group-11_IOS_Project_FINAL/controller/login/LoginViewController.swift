@@ -10,13 +10,21 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var txtpass: UITextField!
+    
+    @IBOutlet weak var txtemail: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+          self.navigationController?.navigationBar.isHidden=true
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func btnlogin(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
