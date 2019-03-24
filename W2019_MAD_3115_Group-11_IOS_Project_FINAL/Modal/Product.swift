@@ -14,19 +14,22 @@ class Product:IDisplay
     var productname:String
     var pimage:String
     var productprice:Float
+    var pdesc:String
     var productdetails=Dictionary<String,Product>()
     init() {
         self.productid=String()
         self.productname=String()
         self.productprice=Float()
         self.pimage=String()
+        self.pdesc=String()
         
     }
-    init(productid:String, productname:String, productprice:Float,pimage:String) {
+    init(productid:String, productname:String, productprice:Float,pimage:String,pdesc:String) {
         self.productid = productid
         self.productname = productname
         self.productprice = productprice
         self.pimage=pimage
+        self.pdesc=pdesc
     }
     func addproducts(pid:String,prod:Product)
     {
@@ -39,12 +42,12 @@ class Product:IDisplay
     
     func displaydata() {
         print("------------------------------------------------------------------------------")
-        print("Product ID:     ||   Product name:       ||   Product price:  ")
+        print("Product ID:     ||   Product name:       ||   Product price:   || pdesc ")
         print("------------------------------------------------------------------------------")
         
         for (_,v) in productdetails
         {
-            print("\(v.productid)            ||   \(v.productname)         ||           \(v.productprice)")
+            print("\(v.productid)            ||   \(v.productname)         ||           \(v.productprice) || \(v.pdesc)")
             
         }
     }

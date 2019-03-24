@@ -93,7 +93,15 @@ extension ProductViewController: OnSelection
         let p = a[index]
         print(p.productname)
         
+        let sb=UIStoryboard(name: "Main", bundle: nil)
+        let homevc=sb.instantiateViewController(withIdentifier: "productdetailpage") as!  ProductDetailsViewController
+        homevc.prid = p.productid
+        homevc.prname=p.productname
+        homevc.pprice=p.productprice
+        homevc.primage=p.pimage
         
+        
+        self.navigationController?.pushViewController(homevc, animated: true)
         
         //print(sh.productList)
         /* if(c==true)

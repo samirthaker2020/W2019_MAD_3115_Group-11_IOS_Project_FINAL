@@ -297,7 +297,7 @@
         <!--Product Details View Controller-->
         <scene sceneID="4et-Mo-A3z">
             <objects>
-                <viewController id="HZz-2W-ZG7" customClass="ProductDetailsViewController" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productdetailpage" id="HZz-2W-ZG7" customClass="ProductDetailsViewController" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ekx-lP-9VD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,7 +318,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxS-2v-KAX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxS-2v-KAX">
                                 <rect key="frame" x="16" y="64" width="173" height="155"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -329,7 +329,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ceH-c2-Dit">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ceH-c2-Dit">
                                 <rect key="frame" x="223" y="121" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -359,6 +359,9 @@
                                 <state key="normal" title="Add To Cart">
                                     <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btncart:" destination="HZz-2W-ZG7" eventType="touchUpInside" id="SfT-jN-xnU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity::" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIk-vh-TVb">
                                 <rect key="frame" x="220" y="64" width="75" height="21"/>
@@ -381,7 +384,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCq-Lg-gcu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCq-Lg-gcu">
                                 <rect key="frame" x="41" y="355" width="276" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -394,9 +397,9 @@
                     </view>
                     <connections>
                         <outlet property="desc" destination="yEV-hd-DKT" id="GST-Cq-m7s"/>
-                        <outlet property="description" destination="JCq-Lg-gcu" id="VgF-dQ-3Ve"/>
                         <outlet property="pdesc" destination="JCq-Lg-gcu" id="2DK-19-2ez"/>
                         <outlet property="pid" destination="Km1-zW-0RF" id="9Lz-ov-Nbw"/>
+                        <outlet property="pimage" destination="dxS-2v-KAX" id="Xvw-YO-yCx"/>
                         <outlet property="pname" destination="TR6-Av-WZk" id="W5u-AV-ugj"/>
                         <outlet property="price" destination="AzQ-yF-4Km" id="0C5-oY-WWk"/>
                         <outlet property="txtqty" destination="X2K-fS-Hd8" id="W5w-eh-hMq"/>

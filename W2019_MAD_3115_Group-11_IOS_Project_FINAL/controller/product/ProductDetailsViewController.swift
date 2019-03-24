@@ -9,8 +9,11 @@
 import UIKit
 
 class ProductDetailsViewController: UIViewController {
-
-    
+    var prid:String?
+    var prname:String?
+    var pprice:Float?
+    var pdesccription:String?
+    var primage:String?
     @IBOutlet weak var desc: UILabel!
     
     @IBOutlet weak var pid: UILabel!
@@ -21,6 +24,7 @@ class ProductDetailsViewController: UIViewController {
     
     @IBOutlet weak var pdesc: UILabel!
     
+    @IBOutlet weak var pimage: UIImageView!
     
     @IBOutlet weak var txtqty: UITextField!
     
@@ -31,7 +35,22 @@ class ProductDetailsViewController: UIViewController {
     
         override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let eprid=prid
+        {
+            pid.text="ProductID:\(eprid)"
+            }
+            if let eprname=prname
+            {
+                pname.text="Name:\(eprname)"
+            }
+            if let eprprice=pprice
+            {
+                price.text = "Price:\(String(eprprice))"
+            }
+            if let eprimage=primage
+            {
+                pimage.image=UIImage(named: eprimage)
+            }
         // Do any additional setup after loading the view.
     }
     
@@ -42,6 +61,8 @@ class ProductDetailsViewController: UIViewController {
     
     
     
+    @IBAction func btncart(_ sender: UIButton) {
+    }
     
     
     /*
