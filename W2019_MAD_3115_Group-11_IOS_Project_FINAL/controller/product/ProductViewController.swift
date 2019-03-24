@@ -12,7 +12,7 @@ class ProductViewController: UIViewController,UITableViewDataSource,UITableViewD
    
     
     @IBOutlet weak var tbl1: UITableView!
-    
+     var currentCell = 0
     let glblData = Product.sharedproduct
     var a=[Product]()
     override func viewDidLoad() {
@@ -61,12 +61,19 @@ self.navigationController?.navigationBar.isHidden=false
         cell.price.text="Price($)::\(String(m.productprice))"
         cell.pname.text="Name::\(m.productname)"
         cell.pimage.image=UIImage(named: m.pimage)
-        
+        cell.btnvd.tag = indexPath.row
+        cell.delegate=self as? OnSelection
+        cell.index = indexPath.row
+        cell.btnvd.addTarget(self, action: #selector(btnAddOrder(_ :)), for: .touchUpInside)
        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150.0
+    }
+    @objc func btnAddOrder(_ sender: UIButton)
+    {
+        print("Hello \(sender.tag)")
     }
     /*
     // MARK: - Navigation
@@ -78,4 +85,35 @@ self.navigationController?.navigationBar.isHidden=false
     }
     */
 
+}
+extension ProductViewController: OnSelection
+{
+    
+    func passProduct(index: Int) {
+        let p = a[index]
+        print(p.productname)
+        
+        
+        
+        //print(sh.productList)
+        /* if(c==true)
+         {
+         let alert = UIAlertController(title:"product",message:"Added Sucessfully",preferredStyle: .alert)
+         let addaction=UIAlertAction(title: "Done", style: .default, handler: nil)
+         alert.addAction(addaction)
+         self.present(alert,animated: true,completion: nil)
+         
+         
+         }
+         else
+         {
+         let alert = UIAlertController(title:"ERROR",message:"Try Again Later..",preferredStyle: .alert)
+         let addaction=UIAlertAction(title: "OK", style: .default, handler: nil)
+         alert.addAction(addaction)
+         self.present(alert,animated: true,completion: nil)
+         
+         }*/
+
+
+}
 }

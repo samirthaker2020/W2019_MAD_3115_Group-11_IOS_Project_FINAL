@@ -13,6 +13,8 @@
 		EB1487992247F72800F892BD /* ViewCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1487982247F72800F892BD /* ViewCartViewController.swift */; };
 		EB14879B2247FCA500F892BD /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB14879A2247FCA500F892BD /* ProductTableViewCell.swift */; };
 		EB14879D2247FEE100F892BD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB14879C2247FEE100F892BD /* Product.swift */; };
+		EB1487A1224816C700F892BD /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1487A0224816C700F892BD /* home.png */; };
+		EB1487A3224818C700F892BD /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1487A2224818C700F892BD /* ProductDetailsViewController.swift */; };
 		EB5B25D12247119C00962B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25D02247119C00962B92 /* AppDelegate.swift */; };
 		EB5B25D32247119C00962B92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25D22247119C00962B92 /* ViewController.swift */; };
 		EB5B25D62247119C00962B92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5B25D42247119C00962B92 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		EB1487982247F72800F892BD /* ViewCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCartViewController.swift; sourceTree = "<group>"; };
 		EB14879A2247FCA500F892BD /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		EB14879C2247FEE100F892BD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		EB1487A0224816C700F892BD /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		EB1487A2224818C700F892BD /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		EB5B25CD2247119C00962B92 /* W2019_MAD_3115_Group-11_IOS_Project_FINAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W2019_MAD_3115_Group-11_IOS_Project_FINAL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5B25D02247119C00962B92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB5B25D22247119C00962B92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			children = (
 				EB1487952247F6EE00F892BD /* ProductViewController.swift */,
 				EB14879A2247FCA500F892BD /* ProductTableViewCell.swift */,
+				EB1487A2224818C700F892BD /* ProductDetailsViewController.swift */,
 			);
 			path = product;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				EBBE67E62247F1870010B123 /* contact.png */,
 				EBBE67E72247F1870010B123 /* monitor.png */,
 				EBBE67E82247F1870010B123 /* hdd.png */,
+				EB1487A0224816C700F892BD /* home.png */,
 				EBBE67E92247F1870010B123 /* help.png */,
 				EBBE67EA2247F1870010B123 /* pendrive.png */,
 				EBBE67EB2247F1870010B123 /* iphone7p.png */,
@@ -303,6 +309,7 @@
 				EBBE67F92247F1870010B123 /* pendrive.png in Resources */,
 				EBBE67FA2247F1870010B123 /* iphone7p.png in Resources */,
 				EBBE67F12247F1870010B123 /* order.png in Resources */,
+				EB1487A1224816C700F892BD /* home.png in Resources */,
 				EBBE67F52247F1870010B123 /* contact.png in Resources */,
 				EBBE67F82247F1870010B123 /* help.png in Resources */,
 				EBBE67F32247F1870010B123 /* earpods.jpg in Resources */,
@@ -322,6 +329,7 @@
 				EB5B25E9224718FA00962B92 /* LoginViewController.swift in Sources */,
 				EB5B25EE22471E3700962B92 /* MenuCollectionViewController.swift in Sources */,
 				EBBE67DD2247D2AF0010B123 /* Extra.swift in Sources */,
+				EB1487A3224818C700F892BD /* ProductDetailsViewController.swift in Sources */,
 				EB1487992247F72800F892BD /* ViewCartViewController.swift in Sources */,
 				EB1487962247F6EE00F892BD /* ProductViewController.swift in Sources */,
 				EB1487912247F66100F892BD /* conatctViewController.swift in Sources */,

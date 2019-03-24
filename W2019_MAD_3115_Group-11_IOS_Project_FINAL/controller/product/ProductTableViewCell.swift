@@ -17,7 +17,8 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var pimage: UIImageView!
     
     
-    
+    var delegate: OnSelection?
+    var index: Int?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,6 +34,16 @@ class ProductTableViewCell: UITableViewCell {
     
     @IBAction func btndetails(_ sender: Any) {
         
+        if let  i = index{
+            if let d = delegate
+            {
+                d.passProduct(index: i)
+            }
+        }
     }
     
 }
+protocol OnSelection:class {
+    func passProduct(index: Int)
+}
+
