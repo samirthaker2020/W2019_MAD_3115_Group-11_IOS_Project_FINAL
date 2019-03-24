@@ -67,7 +67,12 @@ getdata()
         }
         else
         {
-            print("fail")
+            let alert = UIAlertController(title:nil,message:"Invalid",preferredStyle: .alert)
+            let addaction=UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(addaction)
+            self.present(alert,animated: true,completion: nil)
+            self.txtemail.text=""
+            self.txtpass.text=""
         }
         
     }
