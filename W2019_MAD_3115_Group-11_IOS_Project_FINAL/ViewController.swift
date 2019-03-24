@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+//var aindicator=UIActivityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        perform(#selector(movetologin), with: nil, afterDelay: 2)
     }
 
+    
+    @objc func movetologin()
+    {
+        performSegue(withIdentifier: "movetologin", sender: self)
+    }
 
 }
 
