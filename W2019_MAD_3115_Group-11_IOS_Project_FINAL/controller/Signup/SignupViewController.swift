@@ -10,6 +10,16 @@ import UIKit
 
 class SignupViewController: UIViewController {
 
+    
+    @IBOutlet weak var shipinfo: UITextField!
+    @IBOutlet weak var ccinfo: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var fname: UITextField!
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
   self.navigationController?.navigationBar.isHidden=true

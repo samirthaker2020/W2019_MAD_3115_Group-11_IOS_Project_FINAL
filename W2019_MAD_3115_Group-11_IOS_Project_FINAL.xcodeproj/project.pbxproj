@@ -15,6 +15,8 @@
 		EB5B25E9224718FA00962B92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25E8224718FA00962B92 /* LoginViewController.swift */; };
 		EB5B25EE22471E3700962B92 /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25ED22471E3700962B92 /* MenuCollectionViewController.swift */; };
 		EB5B25F2224723C300962B92 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25F1224723C300962B92 /* SignupViewController.swift */; };
+		EB5B25F42247300100962B92 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25F32247300100962B92 /* Customer.swift */; };
+		EB5B25F72247347E00962B92 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25F62247347E00962B92 /* IDisplay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		EB5B25E8224718FA00962B92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB5B25ED22471E3700962B92 /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewController.swift; sourceTree = "<group>"; };
 		EB5B25F1224723C300962B92 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		EB5B25F32247300100962B92 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		EB5B25F62247347E00962B92 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		EB5B25CF2247119C00962B92 /* W2019_MAD_3115_Group-11_IOS_Project_FINAL */ = {
 			isa = PBXGroup;
 			children = (
+				EB5B25F52247344C00962B92 /* protocol */,
 				EB5B25E4224714A200962B92 /* images */,
 				EB5B25E32247149900962B92 /* controller */,
 				EB5B25E22247148000962B92 /* Modal */,
@@ -75,6 +80,7 @@
 		EB5B25E22247148000962B92 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				EB5B25F32247300100962B92 /* Customer.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -119,6 +125,14 @@
 				EB5B25F1224723C300962B92 /* SignupViewController.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		EB5B25F52247344C00962B92 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EB5B25F62247347E00962B92 /* IDisplay.swift */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +209,8 @@
 				EB5B25E9224718FA00962B92 /* LoginViewController.swift in Sources */,
 				EB5B25EE22471E3700962B92 /* MenuCollectionViewController.swift in Sources */,
 				EB5B25F2224723C300962B92 /* SignupViewController.swift in Sources */,
+				EB5B25F72247347E00962B92 /* IDisplay.swift in Sources */,
+				EB5B25F42247300100962B92 /* Customer.swift in Sources */,
 				EB5B25D32247119C00962B92 /* ViewController.swift in Sources */,
 				EB5B25D12247119C00962B92 /* AppDelegate.swift in Sources */,
 			);

@@ -255,6 +255,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9hP-Jz-P4T"/>
                     </view>
+                    <connections>
+                        <outlet property="address" destination="k8K-2Y-RpZ" id="RSw-Xj-QH9"/>
+                        <outlet property="ccinfo" destination="sKo-7Q-58Q" id="9SW-Ls-egR"/>
+                        <outlet property="email" destination="4RO-JW-FCH" id="83h-9V-6cg"/>
+                        <outlet property="fname" destination="lgL-aZ-akk" id="X44-il-d5D"/>
+                        <outlet property="password" destination="4rR-Op-Dlu" id="KBf-G6-1Kh"/>
+                        <outlet property="shipinfo" destination="nmF-Hx-vBu" id="zI3-Et-ujy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afk-qD-dYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
