@@ -16,10 +16,21 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtemail: UITextField!
     
     
-    
+    @IBOutlet weak var swremember: UISwitch!
+     let userdefaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
           self.navigationController?.navigationBar.isHidden=true
+        if let uid = userdefaults.string(forKey: "userid")
+        {
+            txtemail.text = uid
+            swremember.isOn = true
+        }
+        if let vid = userdefaults.string(forKey: "pass")
+        {
+            txtpass.text = vid
+            swremember.isOn = true
+        }
         // Do any additional setup after loading the view.
 getdata()
     }
@@ -38,6 +49,18 @@ getdata()
         var log=logcust.verifylogin(uid: txtemail.text!, pass: txtpass.text!)
         if(log)
         {
+            if swremember.isOn
+            {
+                userdefaults.set(txtemail.text,forKey:"userid")
+                userdefaults.set(txtpass.text,forKey:"pass")
+                
+            }
+            else
+            {
+                userdefaults.removeObject(forKey: "userid")
+                userdefaults.removeObject(forKey: "pass")
+                
+            }
             let sb=UIStoryboard(name: "Main", bundle: nil)
             let lionvc=sb.instantiateViewController(withIdentifier: "mainmenu") as!   MenuCollectionViewController
             self.navigationController?.pushViewController(lionvc, animated: true)

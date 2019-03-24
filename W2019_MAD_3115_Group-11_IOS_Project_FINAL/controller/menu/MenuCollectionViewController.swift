@@ -12,11 +12,14 @@ private let reuseIdentifier = "Cell"
 
 class MenuCollectionViewController: UICollectionViewController {
 
-    
+    var menuitem=["profile4.png","order.png","product.png","cart.png","help.png","contact.png","logout.png"]
+    var menulabel=["My Profile","My Orders","Products","Cart Items","Need Help","Contact Us","Logout"]
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+self.collectionView.allowsSelection  = true;
+          self.navigationItem.hidesBackButton=true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,23 +43,70 @@ class MenuCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return self.menuitem.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menucell", for: indexPath) as! MenuCollectionViewCell
+        cell.menuimae.image = UIImage(named: menuitem[indexPath.row])
+        cell.menutitle.text=menulabel[indexPath.row]
     
         // Configure the cell
     
         return cell
     }
 
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (indexPath.item==0)
+        {
+            print("Profile")
+        }
+        else if (indexPath.item==1)
+        {
+            print("orders")
+        }
+        else if (indexPath.item==2)
+        {
+            print("products")
+            
+            let sb=UIStoryboard(name: "Main", bundle: nil)
+            let homevc=sb.instantiateViewController(withIdentifier: "productpage") as!   ProductViewController
+            self.navigationController?.pushViewController(homevc, animated: true)
+        }
+        else if (indexPath.item==3)
+        {
+            let sb=UIStoryboard(name: "Main", bundle: nil)
+            let homevc=sb.instantiateViewController(withIdentifier: "viewcartpage") as!   ViewCartViewController
+            self.navigationController?.pushViewController(homevc, animated: true)
+        }
+        else if (indexPath.item==4)
+        {
+            let sb=UIStoryboard(name: "Main", bundle: nil)
+            let homevc=sb.instantiateViewController(withIdentifier: "helppage") as!  HelpViewController
+            self.navigationController?.pushViewController(homevc, animated: true)
+        }
+        else if (indexPath.item==5)
+        {
+            let sb=UIStoryboard(name: "Main", bundle: nil)
+            let homevc=sb.instantiateViewController(withIdentifier: "contactus") as!   contactViewController
+            self.navigationController?.pushViewController(homevc, animated: true)
+        }
+        else if (indexPath.item==6)
+        {
+            print("logout")
+            let sb=UIStoryboard(name: "Main", bundle: nil)
+            let lionvc=sb.instantiateViewController(withIdentifier: "splashscreen") as! ViewController
+            self.present(lionvc,animated: true)
+            
+        }
+    }
     // MARK: UICollectionViewDelegate
 
     /*
