@@ -10,6 +10,14 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var price: UILabel!
+    
+    @IBOutlet weak var pname: UILabel!
+    
+    @IBOutlet weak var pimage: UIImageView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +28,10 @@ class ProductTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    
+    @IBAction func btndetails(_ sender: Any) {
+        
+    }
+    
 }

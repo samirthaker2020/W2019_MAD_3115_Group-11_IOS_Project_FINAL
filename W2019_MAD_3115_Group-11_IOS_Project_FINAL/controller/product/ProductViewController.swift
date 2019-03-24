@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ProductViewController: UIViewController {
+class ProductViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+   
     
     
     let glblData = Product.sharedproduct
@@ -40,6 +41,17 @@ self.navigationController?.navigationBar.isHidden=false
         a.append(glblData.productdetails["P003"]!)
         a.append(glblData.productdetails["P004"]!)
         a.append(glblData.productdetails["P005"]!)
+    }
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return glblData.productdetails.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
     
     /*
