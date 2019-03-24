@@ -14,9 +14,10 @@
 		EB5B25E7224715A100962B92 /* mainicon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB5B25E6224715A100962B92 /* mainicon.png */; };
 		EB5B25E9224718FA00962B92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25E8224718FA00962B92 /* LoginViewController.swift */; };
 		EB5B25EE22471E3700962B92 /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25ED22471E3700962B92 /* MenuCollectionViewController.swift */; };
-		EB5B25F2224723C300962B92 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25F1224723C300962B92 /* SignupViewController.swift */; };
 		EB5B25F42247300100962B92 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25F32247300100962B92 /* Customer.swift */; };
 		EB5B25F72247347E00962B92 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25F62247347E00962B92 /* IDisplay.swift */; };
+		EBBE67DD2247D2AF0010B123 /* Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBE67DC2247D2AF0010B123 /* Extra.swift */; };
+		EBBE67DF2247F0380010B123 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBE67DE2247F0380010B123 /* MenuCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +30,10 @@
 		EB5B25E6224715A100962B92 /* mainicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainicon.png; sourceTree = "<group>"; };
 		EB5B25E8224718FA00962B92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB5B25ED22471E3700962B92 /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewController.swift; sourceTree = "<group>"; };
-		EB5B25F1224723C300962B92 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		EB5B25F32247300100962B92 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		EB5B25F62247347E00962B92 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
+		EBBE67DC2247D2AF0010B123 /* Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extra.swift; sourceTree = "<group>"; };
+		EBBE67DE2247F0380010B123 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				EB5B25F32247300100962B92 /* Customer.swift */,
+				EBBE67DC2247D2AF0010B123 /* Extra.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 		EB5B25E32247149900962B92 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				EB5B25F0224723A800962B92 /* Signup */,
 				EB5B25EA22471DD100962B92 /* menu */,
 				EB5B25E5224714B900962B92 /* login */,
 			);
@@ -115,16 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				EB5B25ED22471E3700962B92 /* MenuCollectionViewController.swift */,
+				EBBE67DE2247F0380010B123 /* MenuCollectionViewCell.swift */,
 			);
 			path = menu;
-			sourceTree = "<group>";
-		};
-		EB5B25F0224723A800962B92 /* Signup */ = {
-			isa = PBXGroup;
-			children = (
-				EB5B25F1224723C300962B92 /* SignupViewController.swift */,
-			);
-			path = Signup;
 			sourceTree = "<group>";
 		};
 		EB5B25F52247344C00962B92 /* protocol */ = {
@@ -208,7 +203,8 @@
 			files = (
 				EB5B25E9224718FA00962B92 /* LoginViewController.swift in Sources */,
 				EB5B25EE22471E3700962B92 /* MenuCollectionViewController.swift in Sources */,
-				EB5B25F2224723C300962B92 /* SignupViewController.swift in Sources */,
+				EBBE67DD2247D2AF0010B123 /* Extra.swift in Sources */,
+				EBBE67DF2247F0380010B123 /* MenuCollectionViewCell.swift in Sources */,
 				EB5B25F72247347E00962B92 /* IDisplay.swift in Sources */,
 				EB5B25F42247300100962B92 /* Customer.swift in Sources */,
 				EB5B25D32247119C00962B92 /* ViewController.swift in Sources */,

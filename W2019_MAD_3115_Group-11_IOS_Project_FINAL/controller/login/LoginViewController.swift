@@ -9,7 +9,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+ // var glog=Customer.gblcustomer
+    var logcust=Customer()
     @IBOutlet weak var txtpass: UITextField!
     
     @IBOutlet weak var txtemail: UITextField!
@@ -20,17 +21,35 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
           self.navigationController?.navigationBar.isHidden=true
         // Do any additional setup after loading the view.
+getdata()
     }
     
+    func getdata()  {
+        var c1=Customer(fname:"samirThaker",address:"scarborough",email:"s@gmail.com",password:"samir",ccinfo:"7676568767",shipinfo:"toronto")
+        var c2=Customer(fname:"MandeepKaur",address:"brampton",email:"mandeep@gmail.com",password:"mandy",ccinfo:"8768765656",shipinfo:"brampton")
+        
+        logcust.register(c1: c1, email: "s@gmail.com")
+        logcust.register(c1: c2, email: "mandeep@gmail.com")
+        logcust.displaydata()
+    }
+    
+    
     @IBAction func btnlogin(_ sender: Any) {
+        var log=logcust.verifylogin(uid: txtemail.text!, pass: txtpass.text!)
+        if(log)
+        {
+            let sb=UIStoryboard(name: "Main", bundle: nil)
+            let lionvc=sb.instantiateViewController(withIdentifier: "mainmenu") as!   MenuCollectionViewController
+            self.navigationController?.pushViewController(lionvc, animated: true)
+        }
+        else
+        {
+            print("fail")
+        }
         
     }
     
-    @IBAction func btnsignup(_ sender: Any) {
-        let sb=UIStoryboard(name: "Main", bundle: nil)
-        let lionvc=sb.instantiateViewController(withIdentifier: "signuppage") as!   SignupViewController
-        self.navigationController?.pushViewController(lionvc, animated: true)
-    }
+    
     /*
     // MARK: - Navigation
 

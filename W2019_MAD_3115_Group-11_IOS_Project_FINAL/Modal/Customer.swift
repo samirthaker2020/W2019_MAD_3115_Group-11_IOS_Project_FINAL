@@ -8,9 +8,28 @@
 
 import Foundation
 
-class Customer {
+class Customer:IDisplay {
+    func displaydata() {
+        for (_,v) in custdetails
+        {
+            print(v.fname!)
+            print(v.address!)
+            print(v.ccinfo!)
+            print(v.email!)
+            print(v.password!)
+            print(v.shipinfo!)
+            
+        }
+    }
     
-    static var gblcustomer=Customer()
+    func displaydata(msg: Bool, no: Int) {
+        print(" ")
+    }
+    
+    
+    
+    
+   // static var gblcustomer=Customer()
     var fname:String?
     var address:String?
     var email:String?
@@ -18,12 +37,49 @@ class Customer {
     var ccinfo:String?
     var shipinfo:String?
     var custdetails=Dictionary<String,Customer>()
-    
-    
-    
-    func registercustomer(uid:String,c:Customer)
-    {
-        custdetails.updateValue(c, forKey: uid)
+    var ch:Bool?
+  
+    init() {
+        self.fname=String()
+        self.address=String()
+        self.ccinfo=String()
+        self.shipinfo=String()
+        self.email=String()
+        self.password=String()
+        
     }
+    
+    init(fname:String,address:String,email:String,password:String,ccinfo:String,shipinfo:String)
+        
+    {
+        self.address=address
+        self.ccinfo=ccinfo
+        self.email=email
+        self.fname=fname
+        self.password=password
+        self.shipinfo=shipinfo
+        
+    }
+    func register(c1:Customer,email:String)   {
+         
+        
+            self.custdetails.updateValue(c1, forKey: email)
+    }
+    
+    func verifylogin(uid:String,pass:String) -> Bool {
+        if let u=custdetails[uid]
+        {
+            if u.password==pass
+            {
+                ch=true
+            }
+        }
+        else
+        {
+            ch=false
+        }
+        return ch!
+    }
+    
     
 }
