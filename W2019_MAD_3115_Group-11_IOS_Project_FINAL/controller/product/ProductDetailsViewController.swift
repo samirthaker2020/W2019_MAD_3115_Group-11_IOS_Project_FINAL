@@ -29,11 +29,14 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var txtqty: UITextField!
     
     
+    @IBOutlet weak var lbldesc: UILabel!
     
     
     
     
         override func viewDidLoad() {
+               self.navigationController?.title="ProductList"
+            
         super.viewDidLoad()
         if let eprid=prid
         {
@@ -50,6 +53,11 @@ class ProductDetailsViewController: UIViewController {
             if let eprimage=primage
             {
                 pimage.image=UIImage(named: eprimage)
+            }
+            if let edesc=pdesccription
+            {
+                
+                pdesc.text=edesc
             }
         // Do any additional setup after loading the view.
     }

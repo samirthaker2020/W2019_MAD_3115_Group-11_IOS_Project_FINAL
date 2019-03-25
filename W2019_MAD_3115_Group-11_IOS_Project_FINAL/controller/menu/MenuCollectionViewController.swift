@@ -11,12 +11,12 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class MenuCollectionViewController: UICollectionViewController {
-
+    var user:String?
     var menuitem=["profile4.png","order.png","product.png","cart.png","help.png","contact.png","logout.png"]
     var menulabel=["My Profile","My Orders","Products","Cart Items","Need Help","Contact Us","Logout"]
     
     override func viewDidLoad() {
-        
+        print(user!)
         super.viewDidLoad()
 self.collectionView.allowsSelection  = true;
           self.navigationItem.hidesBackButton=true
@@ -66,7 +66,10 @@ self.collectionView.allowsSelection  = true;
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (indexPath.item==0)
         {
-            print("Profile")
+            let sb=UIStoryboard(name: "Main", bundle: nil)
+            let homevc=sb.instantiateViewController(withIdentifier: "userprofile") as!  UserProfileViewController
+            homevc.user=user
+            self.navigationController?.pushViewController(homevc, animated: true)
         }
         else if (indexPath.item==1)
         {

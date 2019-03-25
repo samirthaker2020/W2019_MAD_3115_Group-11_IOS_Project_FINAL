@@ -9,8 +9,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
- // var glog=Customer.gblcustomer
-    var logcust=Customer()
+  var glog=Customer.gblcustomer
+    
     @IBOutlet weak var txtpass: UITextField!
     
     @IBOutlet weak var txtemail: UITextField!
@@ -35,18 +35,25 @@ class LoginViewController: UIViewController {
 getdata()
     }
     
+    func  getcid()->Int
+    {
+    var random=Int.random(in: 0...100)
+        return random
+    }
     func getdata()  {
-        var c1=Customer(fname:"samirThaker",address:"scarborough",email:"s@gmail.com",password:"samir",ccinfo:"7676568767",shipinfo:"toronto")
-        var c2=Customer(fname:"MandeepKaur",address:"brampton",email:"mandeep@gmail.com",password:"mandy",ccinfo:"8768765656",shipinfo:"brampton")
         
-        logcust.register(c1: c1, email: "s@gmail.com")
-        logcust.register(c1: c2, email: "mandeep@gmail.com")
-        logcust.displaydata()
+      //  var random1=Int.random(in: 0...100)
+        var c1=Customer(cid:getcid(),fname:"samirThaker",address:"scarborough",email:"s@gmail.com",password:"samir",ccinfo:"7676568767",shipinfo:"toronto")
+        var c2=Customer(cid:getcid(),fname:"MandeepKaur",address:"brampton",email:"mandeep@gmail.com",password:"mandy",ccinfo:"8768765656",shipinfo:"brampton")
+        
+        glog.register(c1: c1, email: "s@gmail.com")
+       glog.register(c1: c2, email: "mandeep@gmail.com")
+        glog.displaydata()
     }
     
     
     @IBAction func btnlogin(_ sender: Any) {
-        var log=logcust.verifylogin(uid: txtemail.text!, pass: txtpass.text!)
+        var log=glog.verifylogin(uid: txtemail.text!, pass: txtpass.text!)
         if(log)
         {
             if swremember.isOn
@@ -63,6 +70,7 @@ getdata()
             }
             let sb=UIStoryboard(name: "Main", bundle: nil)
             let lionvc=sb.instantiateViewController(withIdentifier: "mainmenu") as!   MenuCollectionViewController
+            lionvc.user=txtemail.text
             self.navigationController?.pushViewController(lionvc, animated: true)
         }
         else

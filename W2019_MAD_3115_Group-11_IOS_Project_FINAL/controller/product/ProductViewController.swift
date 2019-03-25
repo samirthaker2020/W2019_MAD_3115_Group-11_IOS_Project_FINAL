@@ -20,6 +20,7 @@ class ProductViewController: UIViewController,UITableViewDataSource,UITableViewD
 self.navigationController?.navigationBar.isHidden=false
         getproducts()
         glblData.displaydata()
+        self.navigationController?.title="Product List"
         self.tbl1.dataSource=self
         self.tbl1.delegate=self
         // Do any additional setup after loading the view.
@@ -27,11 +28,11 @@ self.navigationController?.navigationBar.isHidden=false
     
     func getproducts()
     {
-        let product1 = Product(productid: "P001", productname: "Hard Drive", productprice: 120.00,pimage:"hdd.png")
-        let product2 = Product(productid: "P002", productname: "Pen drive", productprice: 20.00,pimage:"pendrive.png")
-        let product3 = Product(productid: "P003", productname: "Earpods", productprice: 50.00,pimage:"earpods.jpg")
-        let product4 = Product(productid: "P004", productname: "monitor", productprice: 300.00,pimage:"monitor.png")
-        let product5 = Product(productid: "P005", productname: "iphone", productprice: 1200.00,pimage:"iphone7p.png")
+        let product1 = Product(productid: "P001", productname: "Hard Drive", productprice: 120.00,pimage:"hdd.png",pdesc:"WD-SATA/1TB/5400RPM/Desktop HDD")
+        let product2 = Product(productid: "P002", productname: "Pen drive", productprice: 20.00,pimage:"pendrive.png",pdesc:"ScanDisk/32GB/USB-3.0")
+        let product3 = Product(productid: "P003", productname: "Earpods", productprice: 50.00,pimage:"earpods.jpg",pdesc:"EarPods/White")
+        let product4 = Product(productid: "P004", productname: "monitor", productprice: 300.00,pimage:"monitor.png",pdesc:"Dell/22-in/HD Display")
+        let product5 = Product(productid: "P005", productname: "iphone7p", productprice: 1200.00,pimage:"iphone7p.png",pdesc:"Appple Iphone7plus")
         
          glblData.addproducts(pid: "P001", prod: product1)
         glblData.addproducts(pid: "P002", prod: product2)
@@ -99,7 +100,7 @@ extension ProductViewController: OnSelection
         homevc.prname=p.productname
         homevc.pprice=p.productprice
         homevc.primage=p.pimage
-        
+        homevc.pdesccription=p.pdesc
         
         self.navigationController?.pushViewController(homevc, animated: true)
         

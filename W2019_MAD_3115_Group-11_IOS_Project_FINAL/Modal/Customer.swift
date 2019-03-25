@@ -12,6 +12,7 @@ class Customer:IDisplay {
     func displaydata() {
         for (_,v) in custdetails
         {
+            print(v.cid!)
             print(v.fname!)
             print(v.address!)
             print(v.ccinfo!)
@@ -29,7 +30,8 @@ class Customer:IDisplay {
     
     
     
-   // static var gblcustomer=Customer()
+   static var gblcustomer=Customer()
+    var cid:Int?
     var fname:String?
     var address:String?
     var email:String?
@@ -37,9 +39,11 @@ class Customer:IDisplay {
     var ccinfo:String?
     var shipinfo:String?
     var custdetails=Dictionary<String,Customer>()
+    var getcust=Dictionary<String,String>()
     var ch:Bool=false
   
     init() {
+        self.cid=Int()
         self.fname=String()
         self.address=String()
         self.ccinfo=String()
@@ -49,9 +53,10 @@ class Customer:IDisplay {
         
     }
     
-    init(fname:String,address:String,email:String,password:String,ccinfo:String,shipinfo:String)
+    init(cid:Int,fname:String,address:String,email:String,password:String,ccinfo:String,shipinfo:String)
         
     {
+        self.cid=cid
         self.address=address
         self.ccinfo=ccinfo
         self.email=email
@@ -84,5 +89,18 @@ class Customer:IDisplay {
         
     }
     
+    func getcustomer(email:String) -> Dictionary<String,String>
+{
+        if let cust=custdetails[email]
+        {
+            getcust.updateValue(String(cust.cid!), forKey: "cid")
+            getcust.updateValue(cust.fname!, forKey: "fname")
+            getcust.updateValue(cust.address!, forKey: "address")
+              getcust.updateValue(cust.email!, forKey: "email")
+              getcust.updateValue(cust.ccinfo!, forKey: "ccinfo")
+              getcust.updateValue(cust.shipinfo!, forKey: "shipinfo")
+        }
+    return getcust
+    }
     
 }
