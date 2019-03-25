@@ -61,10 +61,10 @@ extension ViewCartViewController: OnSelection
     
     func passProduct(index: Int) {
         let p = sh1.productList[index]
-        print("-----------------")
-        print(p.productid!)
-      //  sh1.removeitem(pid: p.productid!)
-      //  self.tblcart.reloadData()
+     //   print("-----------------")
+     //   print(p.productid!)
+        sh1.removeitem(pid: p.productid!)
+       self.tblcart.reloadData()
       //  sh1.displaydata()
         //print(sh.productList)
         /* if(c==true)

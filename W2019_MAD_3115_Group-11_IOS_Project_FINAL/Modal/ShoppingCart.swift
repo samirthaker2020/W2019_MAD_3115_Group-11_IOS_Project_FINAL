@@ -58,25 +58,15 @@ class ShoppingCart:IDisplay
     
     func removeitem(pid:String)
     {
-        for i in 0...productList.count-1
-        {
-            for j in productList
-            {
-                if j.productid==pid
-                {
-                    productList.remove(at: i)
-                    print("---//--")
-                    print(i)
-                       print("---//--")
-                  for i in productList
-                  {
-                    print(i.productid!)
-                    }
-                    break
-                }
+        var arrayNewProducts:[ShoppingCart] = [ShoppingCart]()
+        for product in self.productList {
+            if product.productid != pid {
+                arrayNewProducts.append(product)
             }
-            
+            else{ }
         }
+        self.productList = arrayNewProducts
+        
     }
     
 }
