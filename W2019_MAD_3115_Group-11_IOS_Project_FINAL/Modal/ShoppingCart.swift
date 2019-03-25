@@ -22,6 +22,7 @@ class ShoppingCart:IDisplay
     var name:String=""
     var price:Float=0.0
     var tprice:Float?
+    var orderid:Int?
     var productList = [ShoppingCart]()
     var orderedProduct = Dictionary<Int,[ShoppingCart]>()
     init()
@@ -40,6 +41,14 @@ class ShoppingCart:IDisplay
         self.dateadded=dateadded
     }
     
+    init(oderid:Int,pid:String,pname:String,qty:Int,price:Float,subtotal:Float) {
+        self.orderid=oderid
+        self.productid=pid
+        self.name=pname
+        self.quantity=qty
+        self.price=price
+        self.subtotal=subtotal
+    }
     func addtocart(s:ShoppingCart)
     {
         self.productList.append(s)
@@ -69,4 +78,16 @@ class ShoppingCart:IDisplay
         
     }
     
+    func addorder(s10:[ShoppingCart],oid:Int) {
+        
+        self.orderedProduct.updateValue(s10, forKey: oid)
+        
+      /*  for  (k,v) in orderedProduct
+        {
+            for j in v
+            {
+                print("order:\(j.productid!)")
+            }
+        } */
+    }
 }

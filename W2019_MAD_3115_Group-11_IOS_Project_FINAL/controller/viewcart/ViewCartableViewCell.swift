@@ -10,6 +10,8 @@ import UIKit
 
 class ViewCartableViewCell: UITableViewCell {
 
+    
+    
     var delegate: OnSelection?
     var index: Int?
     @IBOutlet weak var cptotal: UILabel!
