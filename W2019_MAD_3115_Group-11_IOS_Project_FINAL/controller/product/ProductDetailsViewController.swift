@@ -36,7 +36,7 @@ class ProductDetailsViewController: UIViewController {
     
         override func viewDidLoad() {
                self.navigationController?.title="ProductList"
-            
+             self.navigationItem.title="Product Details"
         super.viewDidLoad()
         if let eprid=prid
         {

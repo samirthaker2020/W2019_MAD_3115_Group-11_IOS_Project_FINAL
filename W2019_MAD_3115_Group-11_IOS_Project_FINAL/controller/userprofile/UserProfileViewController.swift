@@ -16,6 +16,11 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var txtemail: UITextField!
     
+    @IBOutlet weak var txtshipinfo: UITextField!
+    @IBOutlet weak var txtccinfo: UITextField!
+    
+    @IBOutlet weak var txtaddress: UITextField!
+    
     
     @IBOutlet weak var txtpass: UITextField!
     var user:String?
@@ -27,7 +32,7 @@ class UserProfileViewController: UIViewController {
        
         getuserdetails()
         
-        
+        self.navigationItem.title="User Profile"
         // Do any additional setup after loading the view.
     }
     
@@ -53,6 +58,18 @@ class UserProfileViewController: UIViewController {
         if let pass=custdetails1["pass"]
         {
             txtpass.text=pass
+        }
+        if let ccinfo=custdetails1["ccinfo"]
+        {
+            txtccinfo.text=ccinfo
+        }
+        if let shipinfo=custdetails1["shipinfo"]
+        {
+            txtshipinfo.text=shipinfo
+        }
+        if let add=custdetails1["address"]
+        {
+            txtaddress.text=add
         }
     }
 

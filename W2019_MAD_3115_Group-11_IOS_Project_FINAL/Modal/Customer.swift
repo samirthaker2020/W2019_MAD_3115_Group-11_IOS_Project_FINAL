@@ -99,6 +99,7 @@ class Customer:IDisplay {
               getcust.updateValue(cust.email!, forKey: "email")
               getcust.updateValue(cust.ccinfo!, forKey: "ccinfo")
               getcust.updateValue(cust.shipinfo!, forKey: "shipinfo")
+                    getcust.updateValue(cust.password!, forKey: "pass")
         }
     return getcust
     }

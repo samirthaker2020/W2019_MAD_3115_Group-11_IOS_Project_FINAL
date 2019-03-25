@@ -20,6 +20,7 @@ class MenuCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 self.collectionView.allowsSelection  = true;
           self.navigationItem.hidesBackButton=true
+         self.navigationItem.title="Main Menu"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
