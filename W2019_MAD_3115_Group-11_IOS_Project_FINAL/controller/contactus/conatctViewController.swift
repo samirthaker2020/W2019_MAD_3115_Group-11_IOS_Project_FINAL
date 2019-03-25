@@ -15,6 +15,10 @@ class contactViewController: UIViewController {
         self.navigationItem.title="Conatct Us"
 
  self.navigationController?.navigationBar.isHidden=false
+        let alert = UIAlertController(title:"Email us-kaurmandeep239@gmail.com ",message:"Dial",preferredStyle: .alert)
+        let addaction=UIAlertAction(title: "Done", style: .default, handler: nil)
+        alert.addAction(addaction)
+        self.present(alert,animated: true,completion: nil)
         // Do any additional setup after loading the view.
     }
     

@@ -25,6 +25,7 @@
 		EB5B25F42247300100962B92 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25F32247300100962B92 /* Customer.swift */; };
 		EB5B25F72247347E00962B92 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B25F62247347E00962B92 /* IDisplay.swift */; };
 		EB8CC9C4224937BD00030949 /* OrderOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CC9C3224937BD00030949 /* OrderOverviewTableViewCell.swift */; };
+		EB8CC9C62249542400030949 /* contactus.html in Resources */ = {isa = PBXBuildFile; fileRef = EB8CC9C52249542400030949 /* contactus.html */; };
 		EBA3796F224855FD00C17419 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3796E224855FD00C17419 /* UserProfileViewController.swift */; };
 		EBB3C9C52248842200310E53 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3C9C42248842200310E53 /* ShoppingCart.swift */; };
 		EBB3C9C72248900200310E53 /* ViewCartableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3C9C62248900200310E53 /* ViewCartableViewCell.swift */; };
@@ -70,6 +71,7 @@
 		EB5B25F32247300100962B92 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		EB5B25F62247347E00962B92 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		EB8CC9C3224937BD00030949 /* OrderOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		EB8CC9C52249542400030949 /* contactus.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = contactus.html; sourceTree = "<group>"; };
 		EBA3796E224855FD00C17419 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		EBB3C9C42248842200310E53 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		EBB3C9C62248900200310E53 /* ViewCartableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCartableViewCell.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				EB5B25E32247149900962B92 /* controller */,
 				EB5B25E22247148000962B92 /* Modal */,
 				EB5B25D02247119C00962B92 /* AppDelegate.swift */,
+				EB8CC9C52249542400030949 /* contactus.html */,
 				EB5B25D22247119C00962B92 /* ViewController.swift */,
 				EB5B25D42247119C00962B92 /* Main.storyboard */,
 				EB5B25D72247119E00962B92 /* Assets.xcassets */,
@@ -348,6 +351,7 @@
 				EBBE67F62247F1870010B123 /* monitor.png in Resources */,
 				EBBE67FD2247F1870010B123 /* contact1.png in Resources */,
 				EB5B25D62247119C00962B92 /* Main.storyboard in Resources */,
+				EB8CC9C62249542400030949 /* contactus.html in Resources */,
 				EBBE67F92247F1870010B123 /* pendrive.png in Resources */,
 				EBBE67FA2247F1870010B123 /* iphone7p.png in Resources */,
 				EBBE67F12247F1870010B123 /* order.png in Resources */,

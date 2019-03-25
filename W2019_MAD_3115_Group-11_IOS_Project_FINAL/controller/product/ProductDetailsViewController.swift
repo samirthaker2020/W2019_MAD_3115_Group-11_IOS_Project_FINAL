@@ -86,6 +86,10 @@ class ProductDetailsViewController: UIViewController {
             var s=ShoppingCart(proid:prid!,qty:Int(txtqty.text!)!,dateadded:adddate!)
             sh.addtocart(s: s)
             sh.displaydata()
+            let alert = UIAlertController(title:"Item",message:"Added Sucessfully",preferredStyle: .alert)
+            let addaction=UIAlertAction(title: "Done", style: .default, handler: nil)
+            alert.addAction(addaction)
+            self.present(alert,animated: true,completion: nil)
         }
        
     }

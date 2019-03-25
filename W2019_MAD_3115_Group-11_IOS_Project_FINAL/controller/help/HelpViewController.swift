@@ -7,18 +7,24 @@
 //
 
 import UIKit
-
+import WebKit
 class HelpViewController: UIViewController {
 
+    @IBOutlet weak var web1: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
  self.navigationController?.navigationBar.isHidden=false
-        self.navigationItem.title="Need Help"
-
+        self.navigationItem.title="Need Help ?"
+       loadHTMLFile()
         // Do any additional setup after loading the view.
     }
     
-
+    func loadHTMLFile(){
+        let filepath = Bundle.main.url(forResource: "contactus", withExtension: "html")
+        let aboutUsLink = URLRequest(url: filepath!)
+        web1.load(aboutUsLink)
+    }
     /*
     // MARK: - Navigation
 
