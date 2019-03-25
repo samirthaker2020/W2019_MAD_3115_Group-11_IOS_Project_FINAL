@@ -41,7 +41,7 @@ class ShoppingCart:IDisplay
         self.dateadded=dateadded
     }
     
-    init(oderid:Int,pid:String,pname:String,qty:Int,price:Float,subtotal:Float) {
+    init(dateadded:String,oderid:Int,pid:String,pname:String,qty:Int,price:Float,subtotal:Float) {
         self.orderid=oderid
         self.productid=pid
         self.name=pname

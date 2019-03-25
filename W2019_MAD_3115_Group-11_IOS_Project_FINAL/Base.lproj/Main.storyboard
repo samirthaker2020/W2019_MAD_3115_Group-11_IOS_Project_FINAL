@@ -676,16 +676,17 @@
                     </view>
                     <connections>
                         <outlet property="tblcart" destination="HjE-6n-LWs" id="YSq-dx-fyI"/>
+                        <segue destination="0LA-QT-qOj" kind="show" identifier="backmainmenu" id="R7T-fc-Sbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPW-yt-jkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821.5999999999999" y="849.62518740629696"/>
+            <point key="canvasLocation" x="1823" y="887"/>
         </scene>
         <!--Order Details View Controller-->
         <scene sceneID="eXo-iC-fOY">
             <objects>
-                <viewController id="DfX-YM-FhJ" customClass="OrderDetailsViewController" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="orderoverview" id="DfX-YM-FhJ" customClass="OrderDetailsViewController" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Whd-2X-jD3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -698,14 +699,56 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ej2-gR-Chj">
+                                <rect key="frame" x="16" y="69" width="343" height="545"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ocell" rowHeight="59" id="2Fr-xs-2Iz" customClass="OrderOverviewTableViewCell" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Fr-xs-2Iz" id="qPH-aU-qAi">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="58.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRb-9p-Bhf">
+                                                    <rect key="frame" x="15" y="20" width="70" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tt-3j-ydn">
+                                                    <rect key="frame" x="125" y="20" width="116" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajQ-Am-tbh">
+                                                    <rect key="frame" x="255" y="20" width="34" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="View"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbloid" destination="9Tt-3j-ydn" id="u9k-LR-n4f"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9NF-2R-k6o"/>
                     </view>
+                    <connections>
+                        <outlet property="tblorderoverview" destination="ej2-gR-Chj" id="VJN-vc-J5G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOw-Ph-4YR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2542" y="846"/>
+            <point key="canvasLocation" x="2541.5999999999999" y="845.1274362818591"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="ilt-CO-dup">

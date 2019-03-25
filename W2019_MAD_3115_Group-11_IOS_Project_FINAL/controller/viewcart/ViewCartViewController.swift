@@ -14,6 +14,7 @@ class ViewCartViewController: UIViewController,UITableViewDelegate,UITableViewDa
     var tempimage:String?
     var tempname:String?
     var tempname1:String?
+    var random:Int?
    var odetails=OrderDetails.od
     var temparray=[ShoppingCart]()
     @IBOutlet weak var grandtotal: UILabel!
@@ -33,22 +34,38 @@ self.navigationItem.title="Cart Details"
     
     func randomoid()->Int
     {
-          var random=Int.random(in: 0...1000)
-   return random
+          random=Int.random(in: 0...1000)
+   return random!
     }
     @objc func addTapped()
     {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-YYYY"
+        let strDate = dateFormatter.string(from: Date())
+        var adddate=strDate
         for m1 in sh1.productList
         {
             if let p11=pro.productdetails[m1.productid!]
             {
                 tempname1=p11.productname
             }
-        var shop1=ShoppingCart(oderid:randomoid(),pid:m1.productid!,pname:tempname1!,qty:m1.quantity!,price:m1.price,subtotal:Float(m1.quantity!)*m1.price)
+        var shop1=ShoppingCart(dateadded:adddate,oderid:randomoid(),pid:m1.productid!,pname:tempname1!,qty:m1.quantity!,price:m1.price,subtotal:Float(m1.quantity!)*m1.price)
             self.temparray.append(shop1)
         }
         
         sh1.addorder(s10: temparray, oid: randomoid())
+        sh1.productList.removeAll()
+        
+        let alert = UIAlertController(title:nil,message:"Order Palced",preferredStyle: .alert)
+        let addaction=UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(addaction)
+        self.present(alert,animated: true,completion: nil)
+        perform(#selector(backtomain), with: nil, afterDelay: 2)
+    }
+    
+    @objc func backtomain()
+    {
+         performSegue(withIdentifier: "backmainmenu", sender: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

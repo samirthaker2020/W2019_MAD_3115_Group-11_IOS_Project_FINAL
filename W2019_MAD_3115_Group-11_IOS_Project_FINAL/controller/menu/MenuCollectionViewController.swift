@@ -16,7 +16,7 @@ class MenuCollectionViewController: UICollectionViewController {
     var menulabel=["My Profile","My Orders","Products","Cart Items","Need Help","Contact Us","Logout"]
     
     override func viewDidLoad() {
-        print(user!)
+       // print(user!)
         super.viewDidLoad()
 self.collectionView.allowsSelection  = true;
           self.navigationItem.hidesBackButton=true
@@ -75,6 +75,9 @@ self.collectionView.allowsSelection  = true;
         else if (indexPath.item==1)
         {
             print("orders")
+            let sb=UIStoryboard(name: "Main", bundle: nil)
+            let homevc=sb.instantiateViewController(withIdentifier: "orderoverview") as!  OrderDetailsViewController
+            self.navigationController?.pushViewController(homevc, animated: true)
         }
         else if (indexPath.item==2)
         {
