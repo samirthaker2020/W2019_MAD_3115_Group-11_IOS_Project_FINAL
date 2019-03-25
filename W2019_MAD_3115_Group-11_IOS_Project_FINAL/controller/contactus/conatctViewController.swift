@@ -12,7 +12,9 @@ class contactViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title="Conatct Us"
 
+ self.navigationController?.navigationBar.isHidden=false
         // Do any additional setup after loading the view.
     }
     

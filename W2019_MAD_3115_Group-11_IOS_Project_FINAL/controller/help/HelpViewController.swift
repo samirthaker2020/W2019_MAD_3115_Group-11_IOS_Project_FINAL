@@ -12,6 +12,8 @@ class HelpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+ self.navigationController?.navigationBar.isHidden=false
+        self.navigationItem.title="Need Help"
 
         // Do any additional setup after loading the view.
     }

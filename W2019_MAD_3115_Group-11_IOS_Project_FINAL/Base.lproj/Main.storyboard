@@ -559,6 +559,51 @@
             </objects>
             <point key="canvasLocation" x="884" y="133.5832083958021"/>
         </scene>
+        <!--View Cart View Controller-->
+        <scene sceneID="gca-1a-N23">
+            <objects>
+                <viewController storyboardIdentifier="viewcartpage" id="mmw-Qm-1Tu" customClass="ViewCartViewController" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tff-3k-sGS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="buc-Ph-gm4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPW-yt-jkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823" y="850"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="ilt-CO-dup">
+            <objects>
+                <viewController storyboardIdentifier="helppage" id="hH8-nZ-np3" customClass="HelpViewController" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VzU-58-Zc0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="82X-BI-kc7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erF-SS-rV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="860"/>
+        </scene>
+        <!--Contact View Controller-->
+        <scene sceneID="W2F-fQ-WQY">
+            <objects>
+                <viewController storyboardIdentifier="contactus" id="b3p-Fk-312" customClass="contactViewController" customModule="W2019_MAD_3115_Group_11_IOS_Project_FINAL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BgP-da-uZR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b7U-ZS-N1i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZW-rO-Rjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="850"/>
+        </scene>
     </scenes>
     <resources>
         <image name="mainicon.png" width="225" height="225"/>
