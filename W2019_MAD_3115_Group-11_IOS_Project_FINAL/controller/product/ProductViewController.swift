@@ -20,7 +20,8 @@ class ProductViewController: UIViewController,UITableViewDataSource,UITableViewD
 self.navigationController?.navigationBar.isHidden=false
         getproducts()
         glblData.displaydata()
-        self.navigationItem.title="Product List";        self.tbl1.dataSource=self
+        self.navigationItem.title="Product List";
+        self.tbl1.dataSource=self
         self.tbl1.delegate=self
         // Do any additional setup after loading the view.
     }

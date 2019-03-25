@@ -8,16 +8,44 @@
 
 import UIKit
 
-class ViewCartViewController: UIViewController {
-
+class ViewCartViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+   
+    @IBOutlet weak var tblcart: UITableView!
+    
+var sh1=ShoppingCart.shop
     override func viewDidLoad() {
         super.viewDidLoad()
 self.navigationItem.title="Cart Details"
         self.navigationController?.navigationBar.isHidden=false
         // Do any additional setup after loading the view.
+        self.tblcart.delegate=self
+        self.tblcart.dataSource=self
+        for i in sh1.productList
+        {
+            print(i.productid!)
+        }
     }
     
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sh1.productList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cartcell") as! ViewCartableViewCell
+        
+        let m=sh1.productList[indexPath.row]
+        cell.delegate=self as OnSelection
+       cell.index=indexPath.row
+        
+        cell.cpid.text=m.productid
+ 
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150.0
+    }
     /*
     // MARK: - Navigation
 
@@ -27,5 +55,36 @@ self.navigationItem.title="Cart Details"
         // Pass the selected object to the new view controller.
     }
     */
-
+}
+extension ViewCartViewController: OnSelection
+{
+    
+    func passProduct(index: Int) {
+        let p = sh1.productList[index]
+        print("-----------------")
+        print(p.productid!)
+      //  sh1.removeitem(pid: p.productid!)
+      //  self.tblcart.reloadData()
+      //  sh1.displaydata()
+        //print(sh.productList)
+        /* if(c==true)
+         {
+         let alert = UIAlertController(title:"product",message:"Added Sucessfully",preferredStyle: .alert)
+         let addaction=UIAlertAction(title: "Done", style: .default, handler: nil)
+         alert.addAction(addaction)
+         self.present(alert,animated: true,completion: nil)
+         
+         
+         }
+         else
+         {
+         let alert = UIAlertController(title:"ERROR",message:"Try Again Later..",preferredStyle: .alert)
+         let addaction=UIAlertAction(title: "OK", style: .default, handler: nil)
+         alert.addAction(addaction)
+         self.present(alert,animated: true,completion: nil)
+         
+         }*/
+        
+        
+    }
 }

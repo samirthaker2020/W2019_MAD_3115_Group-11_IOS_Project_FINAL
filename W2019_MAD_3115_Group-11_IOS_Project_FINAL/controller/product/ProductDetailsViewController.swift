@@ -14,6 +14,8 @@ class ProductDetailsViewController: UIViewController {
     var pprice:Float?
     var pdesccription:String?
     var primage:String?
+    var adddate:String?
+    var sh=ShoppingCart.shop
     @IBOutlet weak var desc: UILabel!
     
     @IBOutlet weak var pid: UILabel!
@@ -70,6 +72,22 @@ class ProductDetailsViewController: UIViewController {
     
     
     @IBAction func btncart(_ sender: UIButton) {
+        
+        if (txtqty.text=="" || txtqty.text=="0" )
+        {
+            
+        }
+        else
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-YYYY"
+            let strDate = dateFormatter.string(from: Date())
+            adddate=strDate
+            var s=ShoppingCart(proid:prid!,qty:Int(txtqty.text!)!,dateadded:adddate!)
+            sh.addtocart(s: s)
+            sh.displaydata()
+        }
+       
     }
     
     
